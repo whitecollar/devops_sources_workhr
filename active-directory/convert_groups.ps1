@@ -1,0 +1,1 @@
+﻿Get-ADGroup -Filter 'GroupCategory -eq "Distribution"'| Set-ADGroup -GroupCategory Security

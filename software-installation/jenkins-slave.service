@@ -1,0 +1,9 @@
+[Unit]
+Description=Jenkins Slave
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=java -jar /var/jenkins/agent.jar -jnlpUrl http://ci.bit-erp.ru/computer/jira-sd/slave-agent.jnlp -secret 975a6145003cbaafcd81c7db2a62b2912041a1b767cd8eaca52d93d02bb42c0f -workDir "/var/jenkins"
+User=root
+Restart=always

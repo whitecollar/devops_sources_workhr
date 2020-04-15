@@ -1,0 +1,1 @@
+﻿Get-ADUser -SearchBase "OU=jira-biterp,DC=bit-erp,DC=loc" -filter {Enabled -eq $True -and PasswordNeverExpires -eq $False}|Set-ADUser -PasswordNeverExpires $true

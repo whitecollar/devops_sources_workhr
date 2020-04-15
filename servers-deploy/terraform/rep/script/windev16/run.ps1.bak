@@ -1,0 +1,18 @@
+$user = "adm" 
+$pwd1 = "Lexroot12qwe"
+$pwd = convertTo-Securestring "$pwd1" -AsPlainText -Force #($pwd1 | ConvertTo-SecureString)
+$Credential = New-Object System.Management.Automation.PSCredential $user, $pwd
+#$args = "c:\domain.ps1"
+echo "00000" > 111.txt
+#Start-Process  powershell.exe -Credential $Credential -ArgumentList ("-file $args")
+#$proc = Start-Process powershell.exe -Credential $Credential  -ArgumentList ("-file $args") 
+#do {start-sleep -Milliseconds 500}
+#until ($proc.HasExited)
+echo "999" > 111.txt
+$args = "c:\postinstall.ps1"
+#$porc = Start-Process powershell.exe -Credential $Credential -ArgumentList ("-file $args")
+$proc = Start-Process powershell.exe -Credential $Credential  -ArgumentList ("-file $args") 
+echo "1000" > 111.txt 
+do {start-sleep -Milliseconds 500}
+until ($proc.HasExited)
+echo "1100" > 111.txt

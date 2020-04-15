@@ -1,0 +1,1 @@
+runner dbinfo --ras %1:1545 --db %2 --ibconnection %3 --v8version %4 --db-user Administrator --db-pwd 111

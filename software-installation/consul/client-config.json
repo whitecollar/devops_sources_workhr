@@ -1,0 +1,16 @@
+{
+"datacenter": "dc1",
+"encrypt": "LZeK7bMuQ+O6DkOXgXi2Fw==",
+"data_dir": "var/consul",
+"log_level": "INFO",
+"enable_debug": true,
+"server": false,
+"leave_on_terminate": false,
+"skip_leave_on_interrupt": true,
+"rejoin_after_leave": true,
+"retry_join": [ 
+  "172.16.50.27",
+  "172.16.50.71",
+  "172.16.50.31"
+  ]
+ }
